@@ -1,3 +1,6 @@
--- Keymaps are automatically loaded on the VeryLazy event
--- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
--- Add any additional keymaps here
+vim.keymap.set("n", ",", ";", { noremap = true })
+vim.keymap.set("n", ";", ",", { noremap = true })
+vim.keymap.set({ "n", "v" }, "<S-J>", "Lzz", { noremap = true })
+vim.keymap.set({ "n", "v" }, "<S-K>", "Hzz", { noremap = true })
+vim.keymap.set("t", "<Esc>", [[<C-\><C-n>]])
+vim.keymap.set("n", "ä", "@")
