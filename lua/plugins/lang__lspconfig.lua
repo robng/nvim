@@ -24,14 +24,16 @@ return {
             end,
           },
           -- TODO: <C-e>: show [e]rrors (aka diagnostics)
+          -- [H]over
           {
             "<C-h>",
             function()
               return vim.lsp.buf.hover()
             end,
           },
+          -- Re[n]ame
           {
-            "<C-r>",
+            "<C-n>",
             function()
               return vim.lsp.buf.rename()
             end,
