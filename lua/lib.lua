@@ -1,6 +1,6 @@
 return {
   focus_explorer = function()
-    local active = Snacks.picker.get({ source = "list" })[1]
+    local active = Snacks.picker.get({ source = "explorer" })[1]
     if active ~= nil then
       active:focus()
       return
