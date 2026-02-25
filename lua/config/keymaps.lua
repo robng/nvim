@@ -10,5 +10,9 @@ vim.keymap.set("t", "<esc>", [[<C-\><C-n>]])
 
 vim.keymap.set("n", ",", ";", { noremap = true })
 vim.keymap.set("n", ";", ",", { noremap = true })
-vim.keymap.set("n", "ä", "@")
 
+-- "Permanent macros"
+vim.keymap.set("n", "ä;", "$100a<Space><Esc>080ldwa;<Esc>0j")
+
+-- Macros
+vim.keymap.set("n", "ä", "@")
