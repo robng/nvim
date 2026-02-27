@@ -1,3 +1,5 @@
+vim.api.nvim_del_augroup_by_name("lazyvim_wrap_spell")
+
 vim.api.nvim_create_autocmd("FileType", {
   pattern = { "javascript", "typescript", "html", "css", "json", "xml" },
   callback = function()
