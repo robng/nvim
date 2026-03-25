@@ -2,6 +2,11 @@ return {
   "neovim/nvim-lspconfig",
   opts = {
     servers = {
+
+      -- -----------------------------------------------------------------
+      --  General
+      -- -----------------------------------------------------------------
+
       ["*"] = {
 
         -- -------------------------------------------------------------
@@ -39,6 +44,24 @@ return {
             end,
           },
         },
+      },
+
+      -- -----------------------------------------------------------------
+      --  ts_ls
+      -- -----------------------------------------------------------------
+
+      ts_ls = {
+        on_attach = function(client, bufnr)
+          vim.api.nvim_create_autocmd("BufWritePost", {
+            pattern = "*.svelte,*.svelte.ts",
+            callback = function()
+              client.notify(
+                "$/onDidChangeTsOrJsFile",
+                { uri = vim.uri_from_bufnr(bufnr) }
+              )
+            end,
+          })
+        end,
       },
     },
   },
