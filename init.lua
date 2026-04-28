@@ -35,7 +35,8 @@ vim.keymap.set("t", "<Esc><Esc>", [[<C-\><C-n>]])
 
 -- Tabs
 vim.opt.expandtab = true
-vim.opt.shiftwidth = 4
+vim.opt.tabstop = 2
+vim.opt.shiftwidth = 2
 
 -- Trailing whitespace
 vim.opt.list = true
